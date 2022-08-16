@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gobet/forget_password/profile/profile_settings/user_profile_setting/user_profile.dart';
 import 'package:gobet/utils/color_notifire.dart';
 import 'package:provider/provider.dart';
 
@@ -16,10 +17,6 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     notifire = Provider.of<ColorNotifire>(context, listen: true);
     return Scaffold(
-      backgroundColor: notifire.getlightblue,
-
-    );
+        backgroundColor: notifire.getlightblue, body: User_profile());
   }
-
-
 }

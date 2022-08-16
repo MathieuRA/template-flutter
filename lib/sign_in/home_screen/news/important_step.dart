@@ -23,7 +23,7 @@ class _Important_stepState extends State<Important_step> {
         backgroundColor: notifire.getprimerycolor,
         body: SingleChildScrollView(
           child: Scrollbar(
-            isAlwaysShown: true,
+            // isAlwaysShown: true,
             child: Column(
               children: [
                 Stack(
@@ -60,7 +60,8 @@ class _Important_stepState extends State<Important_step> {
                                     " Back",
                                     style: TextStyle(
                                         color: Colors.white,
-                                        fontSize: 12,fontFamily: 'Gilroy Bold',
+                                        fontSize: 12,
+                                        fontFamily: 'Gilroy Bold',
                                         fontWeight: FontWeight.bold),
                                   )
                                 ],
@@ -77,11 +78,12 @@ class _Important_stepState extends State<Important_step> {
                   child: Column(
                     children: [
                       Container(
-                        color:Colors.transparent,
+                        color: Colors.transparent,
                         child: Text(
                           "Important Steps for Sports Betting Deals",
                           style: TextStyle(
-                              color: Colors.white,fontFamily: 'Gilroy Bold',
+                              color: Colors.white,
+                              fontFamily: 'Gilroy Bold',
                               fontWeight: FontWeight.w500,
                               fontSize: 22.sp),
                         ),
@@ -90,8 +92,10 @@ class _Important_stepState extends State<Important_step> {
                         children: [
                           Text(
                             "Nov 28,4:30 pm",
-                            style: TextStyle(fontFamily: 'Gilroy Medium',
-                                color: const Color(0xff92a5d1), fontSize: 10.sp),
+                            style: TextStyle(
+                                fontFamily: 'Gilroy Medium',
+                                color: const Color(0xff92a5d1),
+                                fontSize: 10.sp),
                           ),
                         ],
                       ),
@@ -100,7 +104,10 @@ class _Important_stepState extends State<Important_step> {
                       ),
                       Text(
                         "Lorem ipsum dolor sit amet. Vel odio esse sit soluta mollitia aut officiis dignissimos sed consequatur tempora. Aut internos officiis quo nostrum enim vel ratione pariatur sit suscipit perferendis. Ea beatae facere eum pariatur tempore ab libero laborum ut enim sapiente est nemo iste eum fugit recusandae ut quasi sint.",
-                        style: TextStyle(fontFamily: 'Gilroy Medium',color: Colors.white, fontSize: 10.sp),
+                        style: TextStyle(
+                            fontFamily: 'Gilroy Medium',
+                            color: Colors.white,
+                            fontSize: 10.sp),
                       ),
                       SizedBox(
                         height: MediaQuery.of(context).size.height / 80,
@@ -109,8 +116,10 @@ class _Important_stepState extends State<Important_step> {
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: Text(
                           "Sit expedita atque est voluptatem natus ut voluptas et accusantium nulla.",
-                          style:
-                              TextStyle(fontFamily: 'Gilroy Bold',color: Colors.white, fontSize: 14.sp),
+                          style: TextStyle(
+                              fontFamily: 'Gilroy Bold',
+                              color: Colors.white,
+                              fontSize: 14.sp),
                         ),
                       ),
                       SizedBox(
@@ -118,7 +127,10 @@ class _Important_stepState extends State<Important_step> {
                       ),
                       Text(
                         "Lorem ipsum dolor sit amet. Vel tempora. Aut internos officiis quo nostrum enim vel ratione pariatur sit suscipit perferendis. Ea beatae facere eum pariatur tempore ab libero laborum ut enim sapiente est nemo iste eum fugit recusandae ut quasi sint.",
-                        style: TextStyle(fontFamily: 'Gilroy Medium',color: Colors.white, fontSize: 10.sp),
+                        style: TextStyle(
+                            fontFamily: 'Gilroy Medium',
+                            color: Colors.white,
+                            fontSize: 10.sp),
                       ),
                       SizedBox(
                         height: MediaQuery.of(context).size.height / 50,
@@ -126,8 +138,12 @@ class _Important_stepState extends State<Important_step> {
                       Stack(
                         children: [
                           GestureDetector(
-                            onTap: (){
-                              Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: Betting_know()));
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  PageTransition(
+                                      type: PageTransitionType.fade,
+                                      child: Betting_know()));
                             },
                             child: Container(
                               color: Colors.transparent,
@@ -159,21 +175,30 @@ class _Important_stepState extends State<Important_step> {
                       ),
                       Text(
                         "Lorem ipsum dolor sit ame . Aut internos officiis quo nostrum enim vel ratione pariatur sit suscipit perferendis. Ea beatae facere eum pariatur tempore ab libero laborum ut enim sapiente est nemo iste eum fugit recusandae ut quasi sint.",
-                        style: TextStyle(fontFamily: 'Gilroy Medium',color: Colors.white, fontSize: 10.sp),
+                        style: TextStyle(
+                            fontFamily: 'Gilroy Medium',
+                            color: Colors.white,
+                            fontSize: 10.sp),
                       ),
                       SizedBox(
                         height: MediaQuery.of(context).size.height / 50,
                       ),
                       Text(
                         "Lorem ipsum dolor sit ame . Aut internos officiis quo nostrum enim vel ratione pariatur sit suscipit perferendis. Ea beatae facere eum pariatur tempore ab libero laborum ut enim sapiente est nemo iste eum fugit recusandae ut quasi sint.",
-                        style: TextStyle(fontFamily: 'Gilroy Medium',color: Colors.white, fontSize: 10.sp),
+                        style: TextStyle(
+                            fontFamily: 'Gilroy Medium',
+                            color: Colors.white,
+                            fontSize: 10.sp),
                       ),
                       SizedBox(
                         height: MediaQuery.of(context).size.height / 50,
                       ),
                       Text(
                         "Lorem ipsum dolor sit ame . Aut internos officiis quo nostrum enim vel ratione pariatur sit suscipit perferendis. Ea beatae facere eum pariatur tempore ab libero laborum ut enim sapiente est nemo iste eum fugit recusandae ut quasi sint.",
-                        style: TextStyle(fontFamily: 'Gilroy Medium',color: Colors.white, fontSize: 10.sp),
+                        style: TextStyle(
+                            fontFamily: 'Gilroy Medium',
+                            color: Colors.white,
+                            fontSize: 10.sp),
                       ),
                       SizedBox(
                         height: MediaQuery.of(context).size.height / 30,
@@ -268,7 +293,9 @@ class _Important_stepState extends State<Important_step> {
                           Text(
                             " + 209 Likes",
                             style: TextStyle(
-                                color: const Color(0xff8698c6),fontFamily: 'Gilroy Medium', fontSize: 8.sp),
+                                color: const Color(0xff8698c6),
+                                fontFamily: 'Gilroy Medium',
+                                fontSize: 8.sp),
                           ),
                           Spacer(),
                           Icon(
@@ -279,7 +306,9 @@ class _Important_stepState extends State<Important_step> {
                           Text(
                             " 73 Comments",
                             style: TextStyle(
-                                color: const Color(0xff8698c6),fontFamily: 'Gilroy Medium', fontSize: 8.sp),
+                                color: const Color(0xff8698c6),
+                                fontFamily: 'Gilroy Medium',
+                                fontSize: 8.sp),
                           ),
                         ],
                       ),

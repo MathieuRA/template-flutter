@@ -17,7 +17,6 @@ class _InplayState extends State<Inplay> {
     return Scaffold(
       // bottomNavigationBar: buildBottomNavigationBar(context),
       backgroundColor: notifire.getprimerycolor,
-
     );
   }
 }

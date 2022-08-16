@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gobet/log_in/login/login.dart';
 import 'package:gobet/sign_in/home_screen/inplay/Inplay.dart';
 import 'package:gobet/sign_in/home_screen/matches/matches.dart';
 import 'package:gobet/sign_in/home_screen/sports/sports.dart';
+import 'package:gobet/sign_in/signup.dart';
 import 'package:gobet/utils/color_notifire.dart';
 import 'package:provider/provider.dart';
 
@@ -55,6 +57,13 @@ class _MainScreenState extends State<MainScreen> {
                 height: MediaQuery.of(context).size.height / 30),
             label: 'User',
           ),
+          BottomNavigationBarItem(
+            backgroundColor: notifire.getprimerycolor,
+            icon: Image.asset("image/user1.png",
+                color: const Color(0xff4e586e),
+                height: MediaQuery.of(context).size.height / 30),
+            label: 'Login',
+          ),
         ],
         onTap: (index) {
           setState(() {
@@ -68,6 +77,7 @@ class _MainScreenState extends State<MainScreen> {
           _buildOffstageNavigator(1),
           _buildOffstageNavigator(2),
           _buildOffstageNavigator(3),
+          _buildOffstageNavigator(4),
         ],
       ),
     );
@@ -81,6 +91,7 @@ class _MainScreenState extends State<MainScreen> {
           const Sports(),
           const Inplay(),
           const Profile(),
+          const Log_in()
         ].elementAt(index);
       },
     };

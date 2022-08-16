@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gobet/forget_password/profile/message/message.dart';
 import 'package:gobet/forget_password/profile/profile_settings/invite_friends/invite_friend_screen.dart';
+import 'package:gobet/forget_password/profile/profile_settings/profile_setting.dart';
+import 'package:gobet/sign_in/home_screen/news/news.dart';
+import 'package:gobet/sign_in/home_screen/statistic/statics.dart';
 import 'package:gobet/utils/color_notifire.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
@@ -42,15 +46,6 @@ class _User_profileState extends State<User_profile> {
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 40,
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: const Icon(
-                          Icons.arrow_back_sharp,
-                          color: Color(0xfffffffd),
-                        ),
-                      ),
                       const Spacer(),
                       const Text(
                         "Profile Setting",
@@ -59,9 +54,18 @@ class _User_profileState extends State<User_profile> {
                             color: Color(0xfffffffd)),
                       ),
                       const Spacer(),
-                      Image.asset(
-                        "image/change_profile.png",
-                        height: MediaQuery.of(context).size.height / 25,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              PageTransition(
+                                  type: PageTransitionType.fade,
+                                  child: Profile_setting()));
+                        },
+                        child: Image.asset(
+                          "image/change_profile.png",
+                          height: MediaQuery.of(context).size.height / 25,
+                        ),
                       ),
                       SizedBox(
                         width: MediaQuery.of(context).size.width / 40,
@@ -123,12 +127,17 @@ class _User_profileState extends State<User_profile> {
                   child: Container(
                     decoration: BoxDecoration(
                         color: notifire.getprimerycolor,
-                        borderRadius: const BorderRadius.all(Radius.circular(15))),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(15))),
                     child: Column(
                       children: [
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: Notifications()));
+                            Navigator.push(
+                                context,
+                                PageTransition(
+                                    type: PageTransitionType.fade,
+                                    child: Statics()));
                           },
                           child: Container(
                             decoration: BoxDecoration(
@@ -144,9 +153,62 @@ class _User_profileState extends State<User_profile> {
                                   width: MediaQuery.of(context).size.width / 40,
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 18),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 12, vertical: 18),
                                   child: Image.asset(
-                                      "image/icon18.png",color: Colors.white,),
+                                    "image/icon1.png",
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: MediaQuery.of(context).size.width / 40,
+                                ),
+                                const Text(
+                                  "Statistics",
+                                  style: TextStyle(
+                                    fontFamily: 'Gilroy Medium',
+                                    color: Color(0xffeff0f3),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 15),
+                          child: Divider(
+                            color: notifire.getlightblue,
+                            thickness: 1,
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                PageTransition(
+                                    type: PageTransitionType.fade,
+                                    child: Notifications()));
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.all(
+                                Radius.circular(10),
+                              ),
+                              color: notifire.getprimerycolor,
+                            ),
+                            height: MediaQuery.of(context).size.height / 15,
+                            child: Row(
+                              children: [
+                                SizedBox(
+                                  width: MediaQuery.of(context).size.width / 40,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 12, vertical: 18),
+                                  child: Image.asset(
+                                    "image/icon18.png",
+                                    color: Colors.white,
+                                  ),
                                 ),
                                 SizedBox(
                                   width: MediaQuery.of(context).size.width / 40,
@@ -187,7 +249,13 @@ class _User_profileState extends State<User_profile> {
                           ),
                         ),
                         GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                PageTransition(
+                                    type: PageTransitionType.fade,
+                                    child: News()));
+                          },
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius: const BorderRadius.all(
@@ -202,31 +270,21 @@ class _User_profileState extends State<User_profile> {
                                   width: MediaQuery.of(context).size.width / 40,
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 12,vertical: 18),
-                                  child: Image.asset("image/icon19.png",color: Colors.white,),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 12, vertical: 18),
+                                  child: Image.asset(
+                                    "image/icon19.png",
+                                    color: Colors.white,
+                                  ),
                                 ),
                                 SizedBox(
                                   width: MediaQuery.of(context).size.width / 40,
                                 ),
                                 const Text(
-                                  "Face ID",
+                                  "News",
                                   style: TextStyle(
                                     fontFamily: 'Gilroy Medium',
                                     color: Color(0xffeff0f3),
-                                  ),
-                                ),
-                                const Spacer(),
-                                Transform.scale(
-                                  scale: 0.7,
-                                  child: CupertinoSwitch(
-                                    thumbColor: const Color(0xff7E87F1),
-                                    activeColor: const Color(0xffE37FDE),
-                                    value: switchValue,
-                                    onChanged: (value) {
-                                      setState(() {
-                                        switchValue = value;
-                                      });
-                                    },
                                   ),
                                 ),
                                 SizedBox(
@@ -249,7 +307,11 @@ class _User_profileState extends State<User_profile> {
                 ),
                 GestureDetector(
                     onTap: () {
-                      Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: Invite_screen()));
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.fade,
+                              child: Invite_screen()));
                     },
                     child: cards("Feedback", "image/icon21.png")),
                 SizedBox(
@@ -257,7 +319,10 @@ class _User_profileState extends State<User_profile> {
                 ),
                 GestureDetector(
                     onTap: () {
-                      Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: Chat_history()));
+                      Navigator.push(
+                          context,
+                          PageTransition(
+                              type: PageTransitionType.fade, child: Message()));
                     },
                     child: cards("Message", "image/icon6.png")),
                 SizedBox(
@@ -290,8 +355,12 @@ class _User_profileState extends State<User_profile> {
                   width: MediaQuery.of(context).size.width / 40,
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 18,horizontal: 10),
-                  child: Image.asset(img,color: Colors.white,),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+                  child: Image.asset(
+                    img,
+                    color: Colors.white,
+                  ),
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width / 40,

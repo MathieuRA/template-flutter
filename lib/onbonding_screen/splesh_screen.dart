@@ -20,8 +20,9 @@ class _Splesh_ScreenState extends State<Splesh_Screen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 4),
-      () => Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.fade, child: SecondScreen())),
+      const Duration(seconds: 0),
+      () => Navigator.pushReplacement(context,
+          PageTransition(type: PageTransitionType.fade, child: SecondScreen())),
     );
   }
 
@@ -35,7 +36,8 @@ class _Splesh_ScreenState extends State<Splesh_Screen> {
         body: Container(
             color: notifire.getprimerycolor,
             child: Center(
-                child: Container(color: Colors.transparent,
+                child: Container(
+                    color: Colors.transparent,
                     height: MediaQuery.of(context).size.height / 3,
                     width: MediaQuery.of(context).size.width / 2,
                     child: Image.asset("image/batting app icon.png")))),

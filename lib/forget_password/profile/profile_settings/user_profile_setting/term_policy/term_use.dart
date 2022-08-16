@@ -58,11 +58,11 @@ class _Term_of_useState extends State<Term_of_use> {
                 height: MediaQuery.of(context).size.height / 1.45,
                 width: MediaQuery.of(context).size.width,
                 child: Scrollbar(
-                  showTrackOnHover: true,
-                  hoverThickness: 20,
+                  // showTrackOnHover: true,
+                  // hoverThickness: 20,
                   interactive: true,
                   radius: const Radius.circular(30),
-                  isAlwaysShown: true,
+                  // isAlwaysShown: true,
                   child: SingleChildScrollView(
                     child: Column(
                       children: [
@@ -102,15 +102,7 @@ class _Term_of_useState extends State<Term_of_use> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        PageTransition(
-                          type: PageTransitionType.fade,
-                          child: Profile(),
-                        ),
-                      );
-                    },
+                    onTap: () {},
                     child: Container(
                       color: Colors.transparent,
                       child: Image.asset(
